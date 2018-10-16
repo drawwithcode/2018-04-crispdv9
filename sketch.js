@@ -34,8 +34,9 @@ function mousePressed() {
 
 }
 
+
 function draw() {
-  background(0)
+  background(113,164,223)
   for (var j = 0; j < balls.length; j++) {
 
     balls[j].move();
@@ -44,9 +45,11 @@ function draw() {
   }
   push();
   textSize(20);
-  text('Paint the balls', 30, 700);
+  text('Paint the balls', windowWidth/2, windowHeight/2);
   pop();
 }
+
+
 
 function Ball(_x, _y, _diameter) {
   this.x = _x;
@@ -79,7 +82,7 @@ function Ball(_x, _y, _diameter) {
     this.click = function() {
       var d = dist(mouseX, mouseY, this.x, this.y);
       if (d < 40) {
-        this.color = color(255, random(255), random(255));
+        this.color = color(255, random(255), random(255),200);
 
       }
 
